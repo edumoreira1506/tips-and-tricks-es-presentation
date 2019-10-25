@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image } from 'spectacle'
+import { Image, CodePane } from 'spectacle'
 
 const one =
   <div className="Container">
@@ -51,4 +51,34 @@ const four =
     </div>
   </div>
 
-export default [one, two, three, four]
+const five =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">CONST, let e var</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+      var foo = 'Foo!'
+      let bar = 'Bar!'
+
+      function whatIsVar() { 
+        var foo = 'I am var!'
+        console.log(foo) // I am var!
+      }
+
+      function whatIsLet() { 
+        console.log(bar) 
+        let bar = 'I am let!' // Uncaught SyntaxError
+        
+        if (true) { 
+          let newBar = 'I am let!'
+        } 
+        console.log(newBar) // Uncaught ReferenceError
+      }
+      `}
+    />
+  </div>
+
+export default [one, two, three, four, five]

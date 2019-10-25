@@ -17,6 +17,10 @@
     transform: translate(-50%, -50%);
   }
 
+  &__code {
+    font-size: 12px !important;
+  }
+
   img {
     max-height: 50vh;
   }
