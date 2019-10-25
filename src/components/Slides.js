@@ -1,4 +1,5 @@
 import React from 'react'
+import { Image } from 'spectacle'
 
 const one =
   <div className="Container">
@@ -34,4 +35,12 @@ const two =
     </div>
   </div>
 
-export default [one, two]
+const three =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">Alguns frameworks/bibliotecas</h3>
+    </div>
+    <Image src="js-frameworks-and-lib.png"/>
+  </div>
+
+export default [one, two, three]
