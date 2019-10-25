@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Slider from './components/Slider'
+import Presentation from './components/Presentation'
 
-ReactDOM.render(<Slider />, document.getElementById('root'))
+ReactDOM.render(<Presentation />, document.getElementById('root'))
