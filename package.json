@@ -1,19 +1,38 @@
 {
   "name": "trips-and-tricks-es6",
   "version": "1.0.0",
-  "description": "Tricps and tricks of Ecma Script V6.0+",
-  "main": "app.js",
+  "private": true,
+  "description": "Tricks and tricks of Ecma Script V6.0+",
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/edumoreira1506/trips-and-tricks-es6.git"
   },
-  "author": "Eduardo Moreira",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/edumoreira1506/trips-and-tricks-es6/issues"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "homepage": "https://github.com/edumoreira1506/trips-and-tricks-es6#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "author": "Eduardo Moreira",
+  "license": "ISC"
 }
