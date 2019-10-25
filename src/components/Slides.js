@@ -43,4 +43,12 @@ const three =
     <Image src="js-frameworks-and-lib.png"/>
   </div>
 
-export default [one, two, three]
+const four =
+  <div className="DarkContainer">
+    <div className="DarkContainer__subtitle">
+      <h3 className="Slide__subtitle">ES6 OU</h3>
+      <h3 className="Slide__subtitle">ES6 2015</h3>
+    </div>
+  </div>
+
+export default [one, two, three, four]

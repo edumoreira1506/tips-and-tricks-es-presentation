@@ -9,4 +9,15 @@
     padding: 10px 0 10px 0;
     color: $secondary-color;
   }
+
+  &__subtitle {
+    padding: 3px 10px 3px 10px;
+    margin: 15px 0 15px 0;
+    background: $main-color;
+    text-transform: uppercase;
+    font-weight: $bolder;
+    font-size: 40px;
+    width: auto;
+    color: $secondary-color;
+  }
 }
