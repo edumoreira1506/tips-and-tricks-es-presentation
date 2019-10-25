@@ -111,4 +111,34 @@ const six =
     />
   </div>
 
-export default [one, two, three, four, five, six]
+const seven =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">arrow function</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const user = { id: 1, age: 19, type: 'ADMIN' }
+
+        var isAdmin = function(user) { 
+          return user.type === 'ADMIN' 
+        }
+
+        var isAdmin = (user) => { 
+          return user.type === 'ADMIN' 
+        }
+
+        var isAdmin = user => { 
+          return user.type === 'ADMIN' 
+        }
+
+        var isAdmin = user => user.type === 'ADMIN'
+
+        const isAdmin = user => user.type === 'ADMIN'
+      `}
+    />
+  </div>
+
+export default [one, two, three, four, five, six, seven]
