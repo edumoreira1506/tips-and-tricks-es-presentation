@@ -20,4 +20,10 @@
     width: auto;
     color: $secondary-color;
   }
+
+  &__text {
+    text-align: left;
+    color: $font-color;
+    font-size: 13px;
+  }
 }

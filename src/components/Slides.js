@@ -141,4 +141,35 @@ const seven =
     />
   </div>
 
-export default [one, two, three, four, five, six, seven]
+const eight =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">arrow function</h3>
+    </div>
+    <div className="DarkContainer__text">
+      <h3 className="Slide__text">Importante: As arrow functions não tratam-se apenas de uma diferente sintaxe. As arrow functions possuem this léxico, enquanto o modelo convencional possui this dinâmico.</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const user = { 
+          id: 1, 
+          age: 19, 
+          type: 'ADMIN',
+
+          isAdmin: function() {
+            console.log(this) // objeto user
+            return this.type === 'ADMIN'
+          },
+
+          isAdminArrow: () => {
+            console.log(this) // objeto window
+            return this.type === 'ADMIN'
+          }
+        }
+      `}
+    />
+  </div>
+
+export default [one, two, three, four, five, six, seven, eight]
