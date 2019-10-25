@@ -172,4 +172,60 @@ const eight =
     />
   </div>
 
-export default [one, two, three, four, five, six, seven, eight]
+const nine =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">arrow function</h3>
+    </div>
+    <div className="DarkContainer__text">
+      <h3 className="Slide__text">Arrow functions não podem ser constructor, então não é possível usar o operador "new".</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const FunctionUser = function(name, age) { 
+          this.name = name 
+          this.age = age 
+        }
+
+        const ArrowUser = (name, age) => {
+          this.name = name
+          this.age = age
+        }
+
+        const foo = new FunctionUser('Eduardo', 19) 
+        const bar = new ArrowUser('Eduardo', 19) // Uncaught TypeError
+      `}
+    />
+  </div>
+
+const ten =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">arrow function</h3>
+    </div>
+    <div className="DarkContainer__text">
+      <h3 className="Slide__text">Expressões de função precisam declarar explicitamente qual será o retorno da função, enquanto Arrow Functions permitem escrever um modelo encurtado onde sempre a última expressão analisada será o retorno da função.</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+      var fn = function() { return 1 } // retorna 1 
+      var fn = function() { 1 } // retorna undefined 
+      var fn = function() 1 // Uncaught SyntaxError
+      
+      var fn = () => 1 // retorna 1 
+      var fn = () => (1, 2, 3) // retorna 3, última expressão avaliada
+      var fn = () => { 1 } // retorna undefined
+      var fn = () => { return 1 } // retorna 1
+
+      var fn = function () { return { id: 1, name: 'Eduardo' } } // funciona
+      var fn = () => { id: 1, name: 'Eduardo' } // não funciona
+      var fn = () => ({ id: 1, name: 'Eduardo' }) // funciona
+      `}
+    />
+  </div>
+
+export default [one, two, three, four, five, six, seven, eight, nine, ten]
