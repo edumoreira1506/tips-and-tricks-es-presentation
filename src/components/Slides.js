@@ -228,4 +228,68 @@ const ten =
     />
   </div>
 
-export default [one, two, three, four, five, six, seven, eight, nine, ten]
+const eleven =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">class</h3>
+    </div>
+    <div className="DarkContainer__text">
+      <h3 className="Slide__text">Agora conseguimos trabalhar com classes de maneira como já estamos acostumados em outras linguagens podendo até usar hierarquia.</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+      class Car { 
+        constructor(model, brand) { 
+          this.model = model 
+          this.brand = brand 
+        } 
+        
+        walk() { 
+          console.log('vrum' } 
+        }
+      }
+
+      class ModelA extends Car { 
+        constructor(brand, color) { 
+          super('Model a', brand) 
+          this.color = color 
+        } 
+      }
+      `}
+    />
+  </div>
+
+const twoelven =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">class</h3>
+    </div>
+    <div className="DarkContainer__text">
+      <h3 className="Slide__text">A palavra-chave static define um método estático de uma classe. Bastante parecido com outras linguagens.</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+      class Point { 
+        constructor(x, y) { 
+          this.x = x 
+          this.y = y 
+        } 
+
+        static distancy(a, b) { 
+          const dx = a.x * b.x 
+          const dy = a.y * b.y 
+
+          return Math.hypot(dx, dy) 
+        }
+      }
+      `}
+    />
+  </div>
+
+export default [
+  one, two, three, four, five, six, seven, eight, nine, ten, eleven, twoelven
+]
