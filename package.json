@@ -1,0 +1,19 @@
+{
+  "name": "trips-and-tricks-es6",
+  "version": "1.0.0",
+  "description": "Tricps and tricks of Ecma Script V6.0+",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edumoreira1506/trips-and-tricks-es6.git"
+  },
+  "author": "Eduardo Moreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edumoreira1506/trips-and-tricks-es6/issues"
+  },
+  "homepage": "https://github.com/edumoreira1506/trips-and-tricks-es6#readme"
+}
