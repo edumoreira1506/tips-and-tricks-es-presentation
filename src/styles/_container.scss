@@ -1,0 +1,11 @@
+@import "./../variables.scss";
+
+.Container {
+  &__personal {
+    margin: 0 0 15px 0;
+  }
+
+  &__title {
+    margin: 0;
+  }
+}

@@ -1,0 +1,13 @@
+@import "./../variables.scss";
+
+.Title {
+  &__container {
+    background: #f6ed93;
+  }
+
+  &__text {
+    font-size: 50px;
+    padding: 20px 0 20px 0;
+    font-weight: $bolder;
+  }
+}

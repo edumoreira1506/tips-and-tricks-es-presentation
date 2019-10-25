@@ -1,14 +1,15 @@
 import React from 'react'
-import { Deck, Slide, Image } from 'spectacle'
+import { Deck, Slide } from 'spectacle'
 
-const Presentation = ({ slides = [], }) => 
+const Presentation = ({ slides = [] }) =>
   <Deck>
-    <Slide>
-      <Image src="https://overbr.com.br/wp-content/uploads/2019/08/gerador.jpg">Oi</Image>
-    </Slide>
-    <Slide>
-      <Image src="https://overbr.com.br/wp-content/uploads/2019/08/gerador.jpg">Oi</Image>
-    </Slide>
+    {
+      slides.map((slide, index) =>
+        <Slide key={index}>
+          {slide}
+        </Slide>
+      )
+    }
   </Deck>
 
 export default Presentation

@@ -1,0 +1,10 @@
+@import "./../variables.scss";
+
+.Bullet {
+  display: inline-block;
+  background: $secondary-font-color;
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+  margin: 0 8px 0 8px;
+}

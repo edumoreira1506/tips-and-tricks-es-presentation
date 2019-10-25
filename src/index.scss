@@ -1,0 +1,10 @@
+@import "./variables.scss";
+@import "./styles/_container";
+@import "./styles/_title";
+@import "./styles/_personal";
+@import "./styles/_other";
+
+* {
+  margin: 0;
+  font-family: $default-font;
+}
