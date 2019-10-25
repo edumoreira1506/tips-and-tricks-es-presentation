@@ -8,3 +8,15 @@
   height: 5px;
   margin: 0 8px 0 8px;
 }
+
+.Logo {
+  display: inline-block;
+  margin: 0 15px 0 15px;
+  font-size: 43px;
+  padding: 47px 0 0 32px;
+  font-weight: $bolder;
+  width: 100px;
+  height: 100px;
+  background: $main-color;
+  color: $secondary-font-color;
+}

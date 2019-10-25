@@ -15,4 +15,23 @@ const one =
     </div>
   </div>
 
-export default [one]
+const two =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">O que é ES?</h3>
+    </div>
+    <ul className="List">
+      <li className="List__item">JavaScript = linguagem</li>
+      <li className="List__item">EcmaScript = padrão</li>
+      <li className="List__item">Padronizada pela EcmaInternational</li>
+      <li className="List__item">ES6 trouxe conceitos de outras linguagens (Python, Ruby, Java, etc)</li>
+    </ul>
+    <div className="Logo">
+      JS
+    </div>
+    <div className="Logo">
+      ES
+    </div>
+  </div>
+
+export default [one, two]

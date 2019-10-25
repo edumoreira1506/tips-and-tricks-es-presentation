@@ -1,0 +1,13 @@
+@import "./../variables.scss";
+
+.List {
+  font-size: 25px;
+  margin: 0 0 35px 0;
+  
+  &__item {
+    color: $font-color;
+    text-align: left;
+    font-weight: $bolder;
+    margin: 10px 0 10px 0;
+  }
+}

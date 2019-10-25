@@ -1,5 +1,15 @@
 @import "./../variables.scss";
 
+.DarkContainer {
+  background: $secondary-color;
+  padding: 20px;
+  height: 80vh;
+
+  &__title {
+    margin: 0 0 15px 0;
+  }
+}
+
 .Container {
   &__personal {
     margin: 0 0 15px 0;
