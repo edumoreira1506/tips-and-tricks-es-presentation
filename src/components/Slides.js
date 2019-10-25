@@ -81,4 +81,34 @@ const five =
     />
   </div>
 
-export default [one, two, three, four, five]
+const six =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">CONST, let e var</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const constant = 'a' 
+        constant = 'b' // Uncaught TypeError
+
+        const arrayConstant = ['foo', 'bar'] 
+        arrayConstant.push('lorem ipsum') 
+        
+        console.log(arrayConstant) // (3) ["foo", "bar", "lorem ipsum"]
+
+        const user = { 
+          id: 1, 
+          name: 'Eduardo Moreira', 
+          age: 19, 
+          stack: ['js','ruby'] 
+        } 
+        
+        user.id = 10 
+        user.stack.push('php')
+      `}
+    />
+  </div>
+
+export default [one, two, three, four, five, six]
