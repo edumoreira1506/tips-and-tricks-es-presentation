@@ -659,9 +659,52 @@ const twentyEight =
     />
   </div>
 
+const twentyNine =
+  <div className="DarkContainer">
+    <div className="DarkContainer__subtitle">
+      <h3 className="Slide__subtitle">ES8 OU</h3>
+      <h3 className="Slide__subtitle">ES 2017</h3>
+    </div>
+  </div>
+
+const thirty =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">Objet API</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const myObject = { a: 1, b: 2, c: 3 }
+
+        Object.keys(myObject) // ['a', 'b', 'c']
+        Object.values(myObject) // [1, 2, 3]
+        Object.entries(myObject) // [['a', 1], ['b', 2], ['c', 3]]
+      `}
+    />
+  </div>
+
+const thirtyOne =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">Async/await</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const getUser = username => axios.get('https://api.github.com/users/' + username)
+      
+        const getUser = async (username) => 
+          await axios.get('https://api.github.com/users/' + username)
+      `}
+    />
+  </div>
+
 export default [
   one, two, three, four, five, six, seven, eight, nine, ten, eleven, twoelven,
   thirteen, fourteen, fifteen, sixteen, seventeen, eightteen, nineteen, twenty,
   twentyOne, twentyTwo, twentyThree, twentyFour, twentyFive, twentySix, twentySeven,
-  twentyEight
+  twentyEight, twentyNine, thirty, thirtyOne
 ]
