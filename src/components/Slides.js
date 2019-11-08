@@ -290,6 +290,64 @@ const twoelven =
     />
   </div>
 
+const thirteen =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">arrow function + class</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+      class User { 
+        constructor(username) { 
+          this.username = username 
+          
+          makeLink(username, {
+            onSuccess(link) { 
+              this.setLink(link) 
+            }
+          }) 
+        }
+
+        setLink = link => { 
+          this.link = link 
+        }
+      }
+
+      const makeLink = (username, callback) => {
+        if (username) return callback.onSuccess('http://github.com/' + username)
+      }
+      `}
+    />
+  </div>
+
+const fourteen =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">arrow function + class</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+      constructor(username) { 
+        this.username = username 
+        
+        makeLink(username, {
+          onSuccess: link => { 
+            this.setLink(link) 
+          },
+          onError: message => { 
+            alert(message) 
+          }
+        }) 
+      }
+      `}
+    />
+  </div>
+
 export default [
-  one, two, three, four, five, six, seven, eight, nine, ten, eleven, twoelven
+  one, two, three, four, five, six, seven, eight, nine, ten, eleven, twoelven,
+  thirteen, fourteen
 ]
