@@ -702,9 +702,34 @@ const thirtyOne =
     />
   </div>
 
+const thirtyTwo =
+  <div className="DarkContainer">
+    <div className="DarkContainer__subtitle">
+      <h3 className="Slide__subtitle">ES9 OU</h3>
+      <h3 className="Slide__subtitle">ES 2018</h3>
+    </div>
+  </div>
+
+const thirtyThree =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">Finally</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        fetch(url) 
+          .then() 
+          .catch() 
+          .finally(() => console.log('I am always called'))
+      `}
+    />
+  </div>
+
 export default [
   one, two, three, four, five, six, seven, eight, nine, ten, eleven, twoelven,
   thirteen, fourteen, fifteen, sixteen, seventeen, eightteen, nineteen, twenty,
   twentyOne, twentyTwo, twentyThree, twentyFour, twentyFive, twentySix, twentySeven,
-  twentyEight, twentyNine, thirty, thirtyOne
+  twentyEight, twentyNine, thirty, thirtyOne, thirtyTwo, thirtyThree
 ]
