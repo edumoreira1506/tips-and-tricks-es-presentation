@@ -1,5 +1,6 @@
 {
-  "name": "trips-and-tricks-es6",
+  "homepage": "https://edumoreira1506.github.io/tips-and-tricks-es-presentation",
+  "name": "tips-and-tricks-es-presentation",
   "version": "1.0.0",
   "private": true,
   "description": "Tricks and tricks of Ecma Script V6.0+",
@@ -10,11 +11,16 @@
     "react-scripts": "3.2.0",
     "spectacle": "^5.7.1"
   },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
