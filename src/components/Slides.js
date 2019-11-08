@@ -727,9 +727,53 @@ const thirtyThree =
     />
   </div>
 
+const thirtyFour =
+  <div className="DarkContainer">
+    <div className="DarkContainer__subtitle">
+      <h3 className="Slide__subtitle">ES10 OU</h3>
+      <h3 className="Slide__subtitle">ES 2019</h3>
+    </div>
+  </div>
+
+const thirtyFive =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">.flat / .fromEntries / .toString / try catch</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const array = [[1,2,3], [4,5,6]]
+        array.flat() // [1,2,3,4,5,6]
+
+        const entries = [['r', 200], ['g', 145], ['b', 35]]
+        Object.fromEntries(entries) // { r: 200, g: 145, b: 35 }
+
+        cosnt fn = function() { return 1 + 2 }
+        fn.toString() // function() { return 1 + 2 }
+
+        try {
+          // ...
+        } catch {
+          // ...
+        }
+      `}
+    />
+  </div>
+
+const thirtySix =
+  <div className="DarkContainer">
+    <div className="DarkContainer__subtitle">
+      <h3 className="Slide__subtitle">Obrigado!</h3>
+      <h3 className="Slide__subtitle">github: edumoreira1506</h3>
+    </div>
+  </div>
+
 export default [
   one, two, three, four, five, six, seven, eight, nine, ten, eleven, twoelven,
   thirteen, fourteen, fifteen, sixteen, seventeen, eightteen, nineteen, twenty,
   twentyOne, twentyTwo, twentyThree, twentyFour, twentyFive, twentySix, twentySeven,
-  twentyEight, twentyNine, thirty, thirtyOne, thirtyTwo, thirtyThree
+  twentyEight, twentyNine, thirty, thirtyOne, thirtyTwo, thirtyThree, thirtyFour,
+  thirtyFive, thirtySix
 ]
