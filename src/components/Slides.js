@@ -47,7 +47,7 @@ const four =
   <div className="DarkContainer">
     <div className="DarkContainer__subtitle">
       <h3 className="Slide__subtitle">ES6 OU</h3>
-      <h3 className="Slide__subtitle">ES6 2015</h3>
+      <h3 className="Slide__subtitle">ES 2015</h3>
     </div>
   </div>
 
@@ -634,8 +634,34 @@ const twentySix =
     />
   </div>
 
+const twentySeven =
+  <div className="DarkContainer">
+    <div className="DarkContainer__subtitle">
+      <h3 className="Slide__subtitle">ES7 OU</h3>
+      <h3 className="Slide__subtitle">ES 2016</h3>
+    </div>
+  </div>
+
+const twentyEight =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">.includes / Operador exponencial</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        ['foo', 'bar', 'baz'].includes('foo') // true 
+        ['foo', 'bar', 'baz'].includes('foo', 1) // false 
+
+        console.log(2 ** 8) // 256
+      `}
+    />
+  </div>
+
 export default [
   one, two, three, four, five, six, seven, eight, nine, ten, eleven, twoelven,
   thirteen, fourteen, fifteen, sixteen, seventeen, eightteen, nineteen, twenty,
-  twentyOne, twentyTwo, twentyThree, twentyFour, twentyFive, twentySix
+  twentyOne, twentyTwo, twentyThree, twentyFour, twentyFive, twentySix, twentySeven,
+  twentyEight
 ]
