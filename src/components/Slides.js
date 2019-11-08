@@ -347,7 +347,295 @@ const fourteen =
     />
   </div>
 
+const fifteen =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">Melhorias em objetos literais</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const author = 'J. K. Rowling' 
+        const title = 'Harry Potter'
+        const dynamicKey = 'myKey'
+
+        // const book = { author: author, title: title }
+        const book = { author, title }
+
+        const book = { dynamicKey: 'dinamicamente!' }
+        book[dynamicKey] = 'dinamicamente!'
+
+        const book = { [dynamicKey]: 'dinamicamente' }
+      `}
+    />
+  </div>
+
+const sixteen =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">desestruturação</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const book = { 
+          author: 'J. K. Rowling', 
+          title: 'Harry Potter' 
+        }
+
+        const { author, title } = book
+
+        // const isAdmin = user => user.type === 'ADMIN'
+        const isAdmin = ({ type }) => type === 'ADMIN'
+
+        const myArray = ['first argument', 'second argument']
+        const [foo, bar] = myArray
+      `}
+    />
+  </div>
+
+const seventeen =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">DEFAULT + REST + SPREAD</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const sayMyName = (name = 'Eduardo') => { console.log(name) }
+
+        const rest = (name, age, ...rest) => { 
+          console.log(rest) // [...] 
+        }
+
+        const editUser = (user, newProperties) => [
+          { ...user, ...newProperties }, 
+          user
+        ]
+      `}
+    />
+  </div>
+
+const eightteen =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">forEach</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const array = [1,2,3,4,5,6]
+
+        array.forEach(number => console.log(number))
+      `}
+    />
+  </div>
+
+const nineteen =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">.map</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const numbers = [1,2,3,4,5,6]
+
+        const newNumbers = numbers.map(number => number * 2)
+
+        // const newNumbers = [] 
+        
+        // for(i in numbers) { 
+        //  newNumbers.push(numbers[i] * 2) 
+        //}
+      `}
+    />
+  </div>
+
+const twenty =
+  <div className="DarkContainer">
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const users = [ 
+          { 
+            id: 1, 
+            username: 'edumoreira1506', 
+            type: 'ADMIN', 
+            age: 19 
+          }, 
+          { 
+            id: 2, 
+            username: 'claudio123', 
+            type: 'USER', 
+            age: 24 
+          },
+          { 
+            id: 3, 
+            username: 'pedrojotajota', 
+            type: 'ADMIN', 
+            age: 17 
+          }
+        ]
+      `}
+    />
+  </div>
+
+const twentyOne =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">.filter</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const getAdmins = users => { 
+          const admins = [] 
+          
+          for(let i in users) { 
+            if(users[i].type === 'ADMIN') { 
+              admins.push(users[i]) 
+            } 
+          }
+          
+          return admins
+        }
+
+        const getAdmins = users => users.filter(user => user.type === 'ADMIN')
+      `}
+    />
+  </div>
+
+const twentyTwo =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">.find</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const getUser = (id, users) => { 
+          for(let i in users) { 
+            if(users[i].id === id) { 
+              return users[i] 
+            } 
+          } 
+
+          return undefined
+        }
+
+        const getUser = (id, users) => users.find(user => user.id === id)
+      `}
+    />
+  </div>
+
+const twentyThree =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">.findIndex</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const getIndexUser = (id, users) => { 
+          for(let i in users) { 
+            if(users[i].id === id) { 
+              return i 
+            } 
+          } 
+
+          return undefined
+        }
+
+        const getUser = (id, users) => users.findIndex(user => user.id === id)
+      `}
+    />
+  </div>
+
+const twentyFour =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">.every</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const allUsersIsAdmin = users => { 
+          for(let i in users) { 
+            if(users[i].type !== 'ADMIN') { 
+              return false 
+            } 
+          } 
+
+          return true
+        }
+
+        const allUsersIsAdmin = users => users.every(user => user.type === 'ADMIN')
+      `}
+    />
+  </div>
+
+const twentyFive =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">.some</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const hasUser = (users, id) => { 
+          for(let i in users) { 
+            if(users[i].id === id) { 
+              return true 
+            } 
+          }
+          
+          return false
+        }
+
+        const hasUser = (users, id) => users.some(user => user.id === id)
+      `}
+    />
+  </div>
+
+const twentySix =
+  <div className="DarkContainer">
+    <div className="DarkContainer__title">
+      <h3 className="Slide__title">.reduce</h3>
+    </div>
+    <CodePane
+      className="DarkContainer__code"
+      lang="javascript"
+      source={`
+        const totalAge = users => { 
+          let total = 0 
+          
+          for(let i in users) { 
+            total += users[i].age 
+          } 
+          
+          return total 
+        }
+
+        const totalAge = users =>
+          users.reduce((total, user) => total + user.age, 0)
+      `}
+    />
+  </div>
+
 export default [
   one, two, three, four, five, six, seven, eight, nine, ten, eleven, twoelven,
-  thirteen, fourteen
+  thirteen, fourteen, fifteen, sixteen, seventeen, eightteen, nineteen, twenty,
+  twentyOne, twentyTwo, twentyThree, twentyFour, twentyFive, twentySix
 ]
